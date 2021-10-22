@@ -5,14 +5,9 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
 
-  const con = new JSConfetti();
   
-  let image = document.getElementsByTagName('img')[0];
-  let horn = document.getElementById('horn-select');
-  let range = document.getElementById('volume');
-  let playSound = document.getElementsByTagName('button')[0];
   let sound = document.getElementsByTagName('audio')[0];
-
+  let range = document.getElementById('volume');
   
   range.addEventListener('input', (event) => {
     if (range.value == 0){
@@ -31,13 +26,19 @@ function init() {
 
   });
 
+  let horn = document.getElementById('horn-select');
+  let playSound = document.getElementsByTagName('button')[0];
+  const con = new JSConfetti();
   playSound.addEventListener('click', (event) => {
     if (horn.value == 'party-horn'){
+      
       con.addConfetti({emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],});
     }
     sound.play();
 
   });
+
+  let image = document.getElementsByTagName('img')[0];
 
   horn.addEventListener('change', (event) => {
   if (horn.value == 'air-horn'){
