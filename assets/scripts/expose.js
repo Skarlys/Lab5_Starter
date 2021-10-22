@@ -7,11 +7,11 @@ function init() {
 
   const con = new JSConfetti();
   
-  var image = document.getElementsByTagName('img')[0];
-  var horn = document.getElementById('horn-select');
-  var range = document.getElementById('volume');
-  var playSound = document.getElementsByTagName('button')[0];
-  var sound = document.getElementsByTagName('audio')[0];
+  let image = document.getElementsByTagName('img')[0];
+  let horn = document.getElementById('horn-select');
+  let range = document.getElementById('volume');
+  let playSound = document.getElementsByTagName('button')[0];
+  let sound = document.getElementsByTagName('audio')[0];
 
   
   range.addEventListener('input', (event) => {
