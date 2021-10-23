@@ -30,7 +30,7 @@ function init() {
   let playSound = document.getElementsByTagName('button')[0];
   const con = new JSConfetti();
   playSound.addEventListener('click', (event) => {
-    if (horn.value == 'party-horn'){
+    if (horn.value == 'party-horn' && volume.value != 0){
       
       con.addConfetti({emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],});
     }
